@@ -20,4 +20,5 @@ EXPOSE 3000
 ENV UVICORN_PORT=3000
 
 # Run app.py when the container launches
-CMD ["uvicorn", "opendevin.server.listen:app", "--port", "3000"]
+CMD ["uvicorn", "opendevin.server.listen:app", "--host", "0.0.0.0", "--port", "3000"]
+
