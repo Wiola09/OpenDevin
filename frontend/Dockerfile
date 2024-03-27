@@ -14,4 +14,4 @@ RUN npm install
 EXPOSE 3001
 
 # Start the application
-CMD ["npm", "start", "--", "--port", "3001"]
+CMD ["npm", "run", "start", "--", "--port", "3001"]
