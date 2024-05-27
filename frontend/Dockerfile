@@ -1,4 +1,8 @@
 FROM node:18-alpine AS web-build
+ARG VITE_TERMINAL_WS_URL1
+ENV VITE_TERMINAL_WS_URL=$VITE_TERMINAL_WS_URL1
+RUN echo "VITE_TERMINAL_WS_URL=${VITE_TERMINAL_WS_URL}" > .env
+
 WORKDIR /usr/src/app
 COPY ./ ./client
 RUN cd client && npm install && npm run build
